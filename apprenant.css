@@ -1,0 +1,322 @@
+/* Ajustement de la taille de la police de base */
+body {
+    font-size: 16px;
+}
+
+/* Conteneur de la page d'accueil */
+.accueil-container {
+    width: 100%;
+    max-width: none; /* Aucune largeur maximale pour l'élément contenant */
+}
+
+/* Grille générale */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes de largeur égale */
+    grid-template-rows: repeat(3, auto); /* 3 lignes de hauteur automatique */
+    gap: 30px; /* Espace entre les éléments de la grille */
+}
+
+/* Styles pour chaque élément de la grille */
+.grid-item {
+    text-align: center; /* Centrage du contenu */
+    border: 2px solid #000000; /* Bordure de 2px solide noire */
+    border-radius: 8px; /* Coins arrondis */
+    overflow: hidden; /* Masquer le dépassement de contenu */
+    transition: transform 0.3s ease; /* Transition fluide pour l'effet de zoom */
+}
+
+/* Effet de zoom au survol ou au focus */
+.grid-item:focus,
+.grid-item:hover {
+    transform: scale(1.1); /* Zoom à 110% */
+}
+
+/* Assurer que les images dans les éléments de grille ne dépassent pas */
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styles spécifiques pour les éléments de grille avec la classe .grid-itemA */
+.grid-itemA {
+    /* Styles spécifiques */
+    text-align: center;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Effet de zoom au survol ou au focus pour les éléments de grille avec la classe .grid-itemA */
+.grid-itemA:focus,
+.grid-itemA:hover {
+    transform: scale(1.1);
+}
+
+/* Assurer que les images dans les éléments de grille avec la classe .grid-itemA ne dépassent pas */
+.grid-itemA img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style pour la classe .taille */
+.taille {
+    font-size: 80px; /* Taille de police de 80px */
+}
+
+
+/* Style de la modal */
+.modal {
+  display: none; /* Cache la modal par défaut */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  width: 100%;
+  height: 100%;
+  z-index: 9999; /* Assure que la modal s'affiche au-dessus du reste du contenu */
+}
+
+/* Style du contenu de la modal */
+.modal-content {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 80%; /* Ajustez la largeur de la modal selon vos besoins */
+  max-height: 80%; /* Ajustez la hauteur de la modal selon vos besoins */
+  overflow-y: auto; /* Ajoute un défilement vertical si le contenu dépasse la hauteur */
+}
+
+/* Style du bouton Fermer */
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #333;
+  font-size: 24px;
+}
+
+/* Style du titre */
+.modal h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* Style des questions et réponses */
+.modal ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal ul li {
+  margin-bottom: 10px;
+}
+
+.modal ul li p {
+  margin-bottom: 5px;
+}
+
+/* Style des options */
+.modal ul li ul {
+  margin-top: 5px;
+}
+
+.modal ul li ul li {
+  margin-bottom: 3px;
+}
+
+
+
+
+
+
+
+
+
+.grid-item2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  background-color: #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.grid-item2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item2 p {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.tit {
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+.btn-acheter {
+  background-color: #097e09;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-telecharger {
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-acheter:hover {
+  background-color: #065906;
+}
+
+.btn-telecharger:hover {
+  background-color: darkred;
+}
+
+.btn-acheter svg,
+.btn-telecharger svg {
+  margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+.comment-section {
+  margin-top: 10px;
+}
+
+.comment-section textarea {
+  width: 100px;
+  height: 500px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.comment-section button {
+  margin-top: 10px;
+  background-color: #097e09;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.comment-section button:hover {
+  background-color: #065906;
+}
+
+
+
+
+.centered-link {
+  display: block; /* Assure que le lien occupe toute la largeur disponible */
+  text-align: center; /* Centre le texte horizontalement */
+  margin: 0 auto; /* Centre le lien par rapport à son parent */
+}
+
+
+.btn{
+  background-color: #097e09;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: column; /* Aligne les commentaires verticalement */
+  gap: 10px; /* Espacement entre les commentaires */
+}
+
+.comment-item {
+  border: 1px solid #ccc; /* Bordure autour de chaque commentaire */
+  padding: 10px; /* Marge intérieure des commentaires */
+}
+
+
+
+
+
+
+
+
+
+/* Custom Scrollbar Styles */
+.custom-scrollbar {
+  overflow-y: auto; /* Enable vertical scrolling */
+  scrollbar-width: thin; /* Firefox scrollbar width */
+  scrollbar-color: #5dbb9c #e0e0e0; /* Firefox scrollbar colors */
+  max-height: 100px; /* Maximum height */
+}
+
+/* Webkit browsers */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #e0e0e0; /* Background of the track */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #5dbb9c; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Roundness of the thumb */
+  border: 3px solid #e0e0e0; /* Padding around the thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #4aa487; /* Color of the scrollbar thumb on hover */
+}
+
+
+
+
+
+
+.lien {
+  text-align: left;
+}
+
+.btn-translate {
+  margin-left: auto;
+}
+
+.btn-download {
+  margin-right: auto;
+}
